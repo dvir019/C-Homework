@@ -24,7 +24,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	unsigned short num_of_forms = 25;
 	unsigned short usTotalWorkTime = num_of_forms * FORM_TIME_IN_MINUTES;
 	unsigned short usWorkTimeInHours = usTotalWorkTime / MINUTS_IN_HOUR;

@@ -30,7 +30,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	unsigned short usTotalDays;
 
 	// Get the number of days

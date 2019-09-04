@@ -29,7 +29,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	float fGardenArea;
 	float fCubicMeterPrice;
 	float fWaterConsumption;

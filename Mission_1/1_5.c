@@ -27,7 +27,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	int nFirstNumber;
 	int nSecondNumber;
 	int nThirdNumber;

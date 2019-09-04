@@ -26,7 +26,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	unsigned short usNumberOfPassengers;
 	unsigned short usNumberOfSeats;
 

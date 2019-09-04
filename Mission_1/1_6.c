@@ -29,7 +29,7 @@
 //-----------------------------------------------------------------------------
 void main(void)
 {
-	// Variables Defenition
+	// Variables defenition
 	unsigned short usAdultsNumber;
 	unsigned short usChildrenNumber;
 

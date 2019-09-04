@@ -46,6 +46,6 @@ void main(void)
 	printf(WATER_CONSUMPTION_REQUEST);
 	scanf(NUMBER_PLACEHOLDER, &fWaterConsumption);
 
-	// Print the answer
+	// Print the total price
 	printf(TOTAL_PRICE_ANSWER, fGardenArea * fCubicMeterPrice * fWaterConsumption * DAYS_OF_WATERING);
 }

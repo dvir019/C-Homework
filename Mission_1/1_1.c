@@ -1,7 +1,5 @@
 // 1_1.c
 
-#include <stdio.h>
-
 #define FORM_TIME_IN_MINUTES 10
 #define FORM_SALARY_IN_SHEKELS 6.3
 #define MINUTS_IN_HOUR 60

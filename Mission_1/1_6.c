@@ -1,4 +1,4 @@
-// Mission 1, exercise 6
+// 1_6.c
 
 #include <stdio.h>
 

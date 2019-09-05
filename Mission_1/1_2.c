@@ -4,8 +4,8 @@
 
 #define NUMBER_OF_SEATS_REQUEST "Enter the number of seats in a taxi: "
 #define NUMBER_OF_PASSENGERS_REQUEST "Enter the number of passengers in the station: "
-#define NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER "\nIt will require %d taxies, and %d will stay in the station.\n"
-#define NUMBER_PLACEHOLDER "%d"
+#define NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER "\nIt will require %hu taxies, and %hu will stay in the station.\n"
+#define NUMBER_PLACEHOLDER "%hu"
 
 //-----------------------------------------------------------------------------
 //                             Taxies Passengers
@@ -21,7 +21,7 @@
 //
 //-----------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 
+// Student No : 13
 // Date       : 04.09.2019
 //-----------------------------------------------------------------------------
 void main(void)

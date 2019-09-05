@@ -6,8 +6,8 @@
 #define DAYS_IN_MONTH 30
 #define DAYS_IN_YEAR 365
 #define NUMBER_OF_DAYS_REQUEST "Enter number of days: "
-#define TIME_ANSWER "\nThere are %d years, %d months and %d weeks in this time period.\n"
-#define NUMBER_PLACEHOLDER "%d"
+#define TIME_ANSWER "\nThere are %hu years, %hu months and %hu weeks in this time period.\n"
+#define NUMBER_PLACEHOLDER "%hu"
 
 //-----------------------------------------------------------------------------
 //                               Convert Days
@@ -25,7 +25,7 @@
 //
 //-----------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 
+// Student No : 13
 // Date       : 04.09.2019
 //-----------------------------------------------------------------------------
 void main(void)

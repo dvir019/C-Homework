@@ -6,8 +6,8 @@
 #define CHILD_ENTRY_PRICE 35
 #define NUMBER_OF_ADULTS_REQUEST "Enter the number of adults: "
 #define NUMBER_OF_CHILDREN_REQUEST "Enter the number of children: "
-#define TOTAL_PROFIT_ANSWER "\nThe pool's profit is: %d \n"
-#define NUMBER_PLACEHOLDER "%d"
+#define TOTAL_PROFIT_ANSWER "\nThe pool's profit is: %hu \n"
+#define NUMBER_PLACEHOLDER "%hu"
 
 //-----------------------------------------------------------------------------
 //                               Pool's Profits
@@ -24,7 +24,7 @@
 //
 //-----------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 
+// Student No : 13
 // Date       : 05.09.2019
 //-----------------------------------------------------------------------------
 void main(void)

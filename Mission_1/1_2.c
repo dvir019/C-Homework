@@ -3,11 +3,15 @@
 #include <stdio.h>
 
 #define NUMBER_OF_SEATS_REQUEST "Enter the number of seats in a taxi: "
-#define NUMBER_OF_PASSENGERS_REQUEST "Enter the number of passengers in the station: "
-#define NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER "\nIt will require %hu taxies, and %hu will stay in the station.\n"
+#define NUMBER_OF_PASSENGERS_REQUEST "Enter the number of passengers in" \
+									 "the station: "
+#define NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER "\nIt will require %hu taxies," \
+											   "and %hu will stay in the station."
 #define NUMBER_PLACEHOLDER "%hu"
+#define NUMBER_OF_TAXIES (usNumberOfPassengers / usNumberOfSeats)
+#define NUMBER_OF_PASSENGERS (usNumberOfPassengers % usNumberOfSeats)
 
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 //                             Taxies Passengers
 //                             -----------------
 //
@@ -19,11 +23,11 @@
 //
 // Output  : Print the quotient and the remainder.
 //
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 13
+// Student No : 324270883
 // Date       : 04.09.2019
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -39,5 +43,7 @@ void main(void)
 	scanf(NUMBER_PLACEHOLDER, &usNumberOfSeats);
 
 	// Print the answers
-	printf(NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER, usNumberOfPassengers / usNumberOfSeats, usNumberOfPassengers % usNumberOfSeats);
+	printf(NUMBER_OF_TAXIES_AND_PASSENGERS_ANSWER,
+		   NUMBER_OF_TAXIES,
+		   NUMBER_OF_PASSENGERS);
 }

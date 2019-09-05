@@ -7,8 +7,13 @@
 #define THIRD_NUMBER_REQUEST "Enter the third number: "
 #define CIRCULAR_SHIFT_ANSWER "\nThe result of the circular shift is: %d %d %d \n"
 #define NUMBER_PLACEHOLDER "%d"
+#define CIRCULAR_SHIFT(nFirstNumber, nSecondNumber, nThirdNumber) \
+	nFirstNumber = nFirstNumber + nSecondNumber + nThirdNumber;   \
+	nSecondNumber = nFirstNumber - nSecondNumber - nThirdNumber;  \
+	nThirdNumber = nFirstNumber - nSecondNumber - nThirdNumber;   \
+	nFirstNumber = nFirstNumber - nSecondNumber - nThirdNumber;
 
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 //                               Circular Shift
 //                               -------------
 //
@@ -20,11 +25,11 @@
 //
 // Output  : Print yhe circular shift of the three numbers.
 //
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 13
+// Student No : 324270883
 // Date       : 05.09.2019
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -44,6 +49,9 @@ void main(void)
 	printf(THIRD_NUMBER_REQUEST);
 	scanf(NUMBER_PLACEHOLDER, &nThirdNumber);
 
+	// Perform the circular shift
+	CIRCULAR_SHIFT(nFirstNumber, nSecondNumber, nThirdNumber)
+
 	// Print the result
-	printf(CIRCULAR_SHIFT_ANSWER, nThirdNumber, nFirstNumber, nSecondNumber);
+	printf(CIRCULAR_SHIFT_ANSWER, nFirstNumber, nSecondNumber, nThirdNumber);
 }

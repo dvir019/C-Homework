@@ -6,10 +6,14 @@
 #define DAYS_IN_MONTH 30
 #define DAYS_IN_YEAR 365
 #define NUMBER_OF_DAYS_REQUEST "Enter number of days: "
-#define TIME_ANSWER "\nThere are %hu years, %hu months and %hu weeks in this time period.\n"
+#define TIME_ANSWER "\nThere are %hu years, %hu months and %hu weeks in this" \
+					"time period.\n"
 #define NUMBER_PLACEHOLDER "%hu"
+#define NUMBER_OF_YEARS (usTotalDays / DAYS_IN_YEAR)
+#define NUMBER_OF_MONTHS (usTotalDays % DAYS_IN_YEAR) / DAYS_IN_MONTH
+#define NUMBER_OF_WEEKS (((usTotalDays % DAYS_IN_YEAR) % DAYS_IN_MONTH) / DAYS_IN_WEEK)
 
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 //                               Convert Days
 //                               ------------
 //
@@ -23,11 +27,11 @@
 //
 // Output  : Print the number of years, months and weeks.
 //
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Programmer : Dvir Twito
-// Student No : 13
+// Student No : 324270883
 // Date       : 04.09.2019
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -38,7 +42,5 @@ void main(void)
 	scanf(NUMBER_PLACEHOLDER, &usTotalDays);
 
 	// Print the answers
-	printf(TIME_ANSWER, usTotalDays / DAYS_IN_YEAR,
-		   (usTotalDays % DAYS_IN_YEAR) / DAYS_IN_MONTH,
-		   ((usTotalDays % DAYS_IN_YEAR) % DAYS_IN_MONTH) / DAYS_IN_WEEK);
+	printf(TIME_ANSWER, NUMBER_OF_YEARS, NUMBER_OF_MONTHS, NUMBER_OF_WEEKS);
 }

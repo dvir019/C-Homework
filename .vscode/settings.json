@@ -3,6 +3,7 @@
 		"*.exe": true,
 		"*.gitignore": true,
 		"**/*.exe": true,
+		"**/*.pdf": true,
 		"README.md": true
 	}
 }

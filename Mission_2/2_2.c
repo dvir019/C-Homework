@@ -1,10 +1,28 @@
-// 1_2.c
+// 2_2.c
 
 #include <stdio.h>
 
 #define TEN 10
 #define HUNDRED 100
 
+//---------------------------------------------------------------------------------
+//                                 Reverse Number
+//                                 ---------------
+//
+// General : Reverse a three-digits number
+//
+// Input   : A three-digits number
+//
+// Process : Repeatedly add the last digit of the number, multiply the result by
+//			 ten, and divide the number by ten, to get to the next digit.
+//
+// Output  : The reversed number
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 07.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -12,9 +30,11 @@ void main(void)
 	unsigned short reversedNumber;
 	unsigned short temp;
 
-	printf("Enter a three digits number: ");
+	// Get the number
+	printf("Enter a three-digits number: ");
 	scanf("%hu", &number);
 
+	// Calculate the reversed number and print it
 	temp = number;
 	reversedNumber = temp % TEN;
 	temp /= TEN;

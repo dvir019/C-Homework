@@ -45,4 +45,6 @@ void main(void)
 	{
 		printf("The ordered numbers are: %d, %d, %d", max, mid, min);
 	}
+
+	//(code == ASCENDING_ORDER) ? printf("aaa") : printf("sss");
 }

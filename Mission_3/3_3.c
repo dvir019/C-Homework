@@ -7,6 +7,24 @@
 #define TWO 2
 #define FOUR 4
 
+//---------------------------------------------------------------------------------
+//                               Quadratic Equation
+//                               ------------------
+//
+// General : Checks how many solutions a quadratic equation has.
+//
+// Input   : The three terms of the equation.
+//
+// Process : Calculate the discriminant, and compare it to zero.
+//
+// Output  : The number of solutions the equation has.
+//			 In addition, if it has one, it prints it.
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 11.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -32,10 +50,15 @@ void main(void)
 	// Calculate the discriminant
 	discriminant = bTerm * bTerm - FOUR * aTerm * cTerm;
 
-	numberOfSolutions = (discriminant < ZERO) ? (ZERO) : (discriminant == ZERO) ? (ONE) : (TWO);
+	numberOfSolutions = (discriminant < ZERO) ? 
+						(ZERO) : 
+						(discriminant == ZERO) ? (ONE) : (TWO);
+	
+	// Print the number of solutions
 	printf("\nThe quation has %d solutions", numberOfSolutions);
 
-	// If the equation has only one solution, get it (because it doesn't require square root)
+	// If the equation has only one solution, get it
+	// (because it doesn't require square root)
 	if (numberOfSolutions == ONE)
 	{
 		solution = (-bTerm) / (TWO * aTerm);

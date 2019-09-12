@@ -14,6 +14,24 @@
 #define SCALENE_TRIANGLE 3
 #define NOT_TRIANGLE 0
 
+//---------------------------------------------------------------------------------
+//                                  Triangle Type
+//                                  -------------
+//
+// General : Finds the type of the triangle, based on his angles.
+//
+// Input   : The tree angles of the triangle.
+//
+// Process : Sort the angles, check if the biggest of them is bigger, smaller or
+//			 equal to 90 degrees, and check for equal angles.
+//
+// Output  : The type of the triangle.
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 11.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -43,7 +61,8 @@ void main(void)
 	biggestAngle = MAX(MAX(biggestAngle, secondAngle), thirdAngle);
 	smallestAngle = secondAngle;
 	smallestAngle = MIN(MIN(smallestAngle, firstAngle), thirdAngle);
-	middleAngle = firstAngle + secondAngle + thirdAngle - biggestAngle - smallestAngle;
+	middleAngle = firstAngle + secondAngle + thirdAngle;
+	middleAngle -= (biggestAngle + smallestAngle);
 
 	// The angles form a triangle
 	if (firstAngle + secondAngle + thirdAngle == TRIANGLE_ANGLES_SUM)
@@ -53,7 +72,6 @@ void main(void)
 		{
 			anglesType = ACUTE_TRIANGLE;
 		}
-
 		// Obtuse or Right angle triangle
 		else
 		{
@@ -62,7 +80,6 @@ void main(void)
 			{
 				anglesType = OBTUSE_TRIANGLE;
 			}
-
 			// Right angle triangle
 			else
 			{
@@ -78,14 +95,12 @@ void main(void)
 			{
 				sidesType = EQUILATERAL_TRIANGLE;
 			}
-
 			// Isosceles triangle
 			else
 			{
 				sidesType = ISOSCELES_TRIANGLE;
 			}
 		}
-
 		// Isosceles or scalene triangle
 		else
 		{
@@ -109,6 +124,7 @@ void main(void)
 		sidesType = NOT_TRIANGLE;
 	}
 
+	// Print the results
 	printf("\nAngles type: %hu\nSides type: %hu\n\n"
 		   "The meaning of the angles types:\n%hu - Not a tiangle\n%hu - Acute\n"
 		   "%hu - Obtuse\n%hu - Right angle\n\nThe meaning of the sides types:\n"

@@ -11,11 +11,31 @@
 #define ONE_HUNDRED_AND_SIXTY 160
 #define ONE_HUNDRED_AND_SEVENTY_FIVE 175
 
+//---------------------------------------------------------------------------------
+//                                  Total Salary
+//                                  ------------
+//
+// General : Calculates the total salary of a certain worker.
+//
+// Input   : The base salary of the worker, his seniority, the number of children
+//			 he has, the number of hours he worked, and four more numbers
+//			 representing the base bonuses.
+//
+// Process : Check if the worker needs to get bonuses, and add them to the
+//			 calculation.
+//
+// Output  : The total salary of the worker.
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 12.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
 	unsigned short basicSalary;
-	unsigned short seniorityInYeras;
+	unsigned short seniorityInYears;
 	unsigned short numberOfChildren;
 	unsigned short workHours;
 	unsigned short T175;
@@ -31,7 +51,7 @@ void main(void)
 
 	// Get the seniority
 	printf("Enter your seniority: ");
-	scanf("%hu", &seniorityInYeras);
+	scanf("%hu", &seniorityInYears);
 
 	// Get the number of children
 	printf("Enter the number of your children: ");
@@ -57,26 +77,33 @@ void main(void)
 	printf("Enter TY: ");
 	scanf("%hu", &TY);
 
-	totalSalary = ((float)basicSalary) * (seniorityInYeras > TEN) ? SENIORITY_BONUS : ONE;
+	totalSalary = ((float)basicSalary) *
+				  ((seniorityInYears > TEN) ? SENIORITY_BONUS : ONE);
 
-// 
+	// More than three children
 	if (numberOfChildren > THREE)
 	{
+		// More than six children
 		if (numberOfChildren > SIX)
 		{
 			totalSalary += (numberOfChildren - SIX) * TB + THREE * TY;
 		}
+		// Less than six children
 		else
 		{
 			totalSalary += (numberOfChildren - THREE) * TY;
 		}
 	}
+	// Worked more than one hundred and sixty hours
 	if (workHours > ONE_HUNDRED_AND_SIXTY)
 	{
+		// Worked more than one hundred and seventy five hours
 		if (workHours > ONE_HUNDRED_AND_SEVENTY_FIVE)
 		{
-			totalSalary += (workHours - ONE_HUNDRED_AND_SEVENTY_FIVE) * T175 + FIFTEEN * T160;
+			totalSalary += (workHours - ONE_HUNDRED_AND_SEVENTY_FIVE) * T175 +
+						   FIFTEEN * T160;
 		}
+		// Worked more than one hundred and seventy five hours
 		else
 		{
 			totalSalary += (workHours - ONE_HUNDRED_AND_SIXTY) * T160;

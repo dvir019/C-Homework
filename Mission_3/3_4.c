@@ -10,6 +10,23 @@
 #define FALSE 0
 #define BOOL unsigned short
 
+//---------------------------------------------------------------------------------
+//                                 Basketball Game
+//                                 ---------------
+//
+// General : Checks if the given scores of a basketball game may be real.
+//
+// Input   : The scores of the game.
+//
+// Process : Check if the scores fulfill all of the conditions of the study.
+//
+// Output  : Whether or not those scores may be real.
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 12.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -42,5 +59,6 @@ void main(void)
 
 	isScorePossible *= (winnerScore - loserScore > MAX_DIFFERENCE) ? FALSE : TRUE;
 
-	isScorePossible ? (printf("Those scores are valid.")) : (printf("Those scores are not valid."));
+	isScorePossible ? (printf("Those scores are valid.")) : 
+					  (printf("Those scores are not valid."));
 }

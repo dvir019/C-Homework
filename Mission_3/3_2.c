@@ -73,10 +73,13 @@ void main(void)
 		// Equilateral or isosceles triangle
 		if (biggestAngle == smallestAngle)
 		{
+			// Equilateral triangle
 			if (smallestAngle == middleAngle)
 			{
 				sidesType = EQUILATERAL_TRIANGLE;
 			}
+
+			// Isosceles triangle
 			else
 			{
 				sidesType = ISOSCELES_TRIANGLE;

@@ -15,6 +15,7 @@ void main(void)
 	float cTerm;
 	float discriminant;
 	int numberOfSolutions;
+	float solution;
 
 	// Get the a term
 	printf("Enter the first term (a): ");
@@ -33,4 +34,11 @@ void main(void)
 
 	numberOfSolutions = (discriminant < ZERO) ? (ZERO) : (discriminant == ZERO) ? (ONE) : (TWO);
 	printf("\nThe quation has %d solutions", numberOfSolutions);
+
+	// If the equation has only one solution, get it (because it doesn't require square root)
+	if (numberOfSolutions == ONE)
+	{
+		solution = (-bTerm) / (TWO * aTerm);
+		printf("\nThe solution is: %f", solution);
+	}
 }

@@ -31,40 +31,16 @@ void main(void)
 	winnerScore = MAX(firstScore, secondScore);
 	loserScore = firstScore + secondScore - winnerScore;
 
+	// Check for all the conditions, and print the result
 	isScorePossible = TRUE;
-	/*
-	if (winnerScore == loserScore ||
-		winnerScore > MAX_POINTS ||
-		loserScore < MIN_POINTS ||
-		winnerScore - loserScore > MAX_DIFFERENCE)
-	{
-		isScorePossible = FALSE;
-	}
-	*/
 
-	if (winnerScore == loserScore)
-	{
-		isScorePossible = FALSE;
-	}
-	if (winnerScore > MAX_POINTS)
-	{
-		isScorePossible = FALSE;
-	}
-	if (loserScore < MIN_POINTS)
-	{
-		isScorePossible = FALSE;
-	}
-	if (winnerScore - loserScore > MAX_DIFFERENCE)
-	{
-		isScorePossible = FALSE;
-	}
+	isScorePossible *= (winnerScore == loserScore) ? FALSE : TRUE;
 
-	if (isScorePossible)
-	{
-		printf("Those scores are valid.");
-	}
-	else
-	{
-		printf("Those scores are not valid.");
-	}
+	isScorePossible *= (winnerScore > MAX_POINTS) ? FALSE : TRUE;
+
+	isScorePossible *= (loserScore < MIN_POINTS) ? FALSE : TRUE;
+
+	isScorePossible *= (winnerScore - loserScore > MAX_DIFFERENCE) ? FALSE : TRUE;
+
+	isScorePossible ? (printf("Those scores are valid.")) : (printf("Those scores are not valid."));
 }

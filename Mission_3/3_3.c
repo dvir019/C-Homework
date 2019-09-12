@@ -16,19 +16,21 @@ void main(void)
 	float discriminant;
 	int numberOfSolutions;
 
+	// Get the a term
 	printf("Enter the first term (a): ");
 	scanf("%f", &aTerm);
 
+	// Get the b term
 	printf("Enter the second term (b): ");
 	scanf("%f", &bTerm);
 
+	// Get the c term
 	printf("Enter the third term (c): ");
 	scanf("%f", &cTerm);
 
+	// Calculate the discriminant
 	discriminant = bTerm * bTerm - FOUR * aTerm * cTerm;
 
 	numberOfSolutions = (discriminant < ZERO) ? (ZERO) : (discriminant == ZERO) ? (ONE) : (TWO);
 	printf("\nThe quation has %d solutions", numberOfSolutions);
-
-	//(discriminant < ZERO) ? (printf("The equation has no solutions.")) : ((discriminant > ZERO) ? (printf("The equation has 2 solutions.")) : (printf("The equation has 1 solution.")));
 }

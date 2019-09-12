@@ -12,9 +12,9 @@ void main(void)
 	int firstNumber;
 	int secondNumber;
 	int thirdNumber;
-	int max;
-	int mid;
-	int min;
+	int printFirst;
+	int printSecond;
+	int printThird;
 	char code;
 
 	printf("Enter the first number: ");
@@ -26,25 +26,35 @@ void main(void)
 	printf("Enter the third number: ");
 	scanf("%d", &thirdNumber);
 
-	printf("Enter U if you want to print the numbers in ascending order, and D if you want in descending order");
-	scanf("%c", code);
+	printf("Enter U if you want to print the numbers in ascending order, and D if you want in descending order: ");
+	scanf("   %c", &code);
 
-	max = firstNumber;
-	max = MAX(MAX(max, secondNumber), thirdNumber);
+	printFirst = firstNumber;
+	printFirst = MAX(MAX(printFirst, secondNumber), thirdNumber);
 
-	min = secondNumber;
-	min = MIN(MIN(min, firstNumber), thirdNumber);
+	printThird = secondNumber;
+	printThird = MIN(MIN(firstNumber, printThird), thirdNumber);
+	printSecond = firstNumber + secondNumber + thirdNumber - printFirst - printThird;
 
-	mid = firstNumber + secondNumber + thirdNumber - max - min;
-
-	if (code == ASCENDING_ORDER)
-	{
-		printf("The ordered numbers are: %d, %d, %d", min, mid, max);
-	}
+	// Decending order
 	if (code == DECENDING_ORDER)
 	{
-		printf("The ordered numbers are: %d, %d, %d", max, mid, min);
+		printf("The ordered numbers are: %d, %d, %d", printFirst, printSecond, printThird);
 	}
-
-	//(code == ASCENDING_ORDER) ? printf("aaa") : printf("sss");
+	// Ascending order or invalid code
+	else
+	{
+		// Ascending order
+		if (code == ASCENDING_ORDER)
+		{
+			SWAP(printFirst, printThird);
+			printf("The ordered numbers are: %d, %d, %d", printFirst, printSecond, printThird);
+		}
+		
+		// Invalid code
+		else
+		{
+			printf("Your code is not valid");
+		}
+	}
 }

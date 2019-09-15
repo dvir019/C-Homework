@@ -1,5 +1,4 @@
-// 4_1.c
-
+// 4_1_1.c
 #include <stdio.h>
 
 #define PLUS_OPERATOR '+'

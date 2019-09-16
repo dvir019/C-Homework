@@ -1,4 +1,5 @@
 // 4_1_1.c
+
 #include <stdio.h>
 
 #define PLUS_OPERATOR '+'
@@ -9,6 +10,23 @@
 #define TRUE 1
 #define FALSE 0
 
+//---------------------------------------------------------------------------------
+//                                Simple Calculator
+//                                -----------------
+//
+// General : Calculates a simple mathematical expressions.
+//
+// Input   : Two numbers and an operator.
+//
+// Process : Check the type of the operator, and calculates the result.
+//
+// Output  : The result of the expression.
+//
+//---------------------------------------------------------------------------------
+// Programmer : Dvir Twito
+// Student No : 324270883
+// Date       : 15.09.2019
+//---------------------------------------------------------------------------------
 void main(void)
 {
 	// Variables defenition
@@ -18,15 +36,19 @@ void main(void)
 	float result;
 	BOOLEAN isOperatorValid;
 
+	// Get the first number
 	printf("Enter the first number: ");
 	scanf("%f", &firstNumber);
 
+	// Get the operator
 	printf("Enter the operator: ");
 	scanf("    %c", &operator);
 
+	// Get the second number
 	printf("Enter the second number: ");
 	scanf("%f", &secondNumber);
 
+	// Calculate the result according to the operator type
 	isOperatorValid = TRUE;
 
 	switch (operator)
@@ -48,18 +70,15 @@ void main(void)
 		isOperatorValid = FALSE;
 		break;
 	}
+
+	// Print the result if the operator is valid
 	if (isOperatorValid)
 	{
 		printf("\nThe result is %f", result);
 	}
+	// Print error message, because the operator is not valid
 	else
 	{
 		printf("\nThe operator is not valid.");
 	}
-	// int a, b, c;
-	// printf("\n\n");
-	// scanf("%02d%02d%04d", &a, &b, &c);
-	// printf("%d\n", a);
-	// printf("%d\n", b);
-	// printf("%d\n", c);
 }

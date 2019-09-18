@@ -2,6 +2,8 @@
 
 #define ONE 1
 #define TWO 2
+#define ARBITRARY_FIRST_NUMBER 5
+#define ARBITRARY_SECOND_NUMBER 8
 
 #define ABS(number) ((number) * ((TWO * number + ONE) % TWO))
 
@@ -32,8 +34,8 @@ void main(void)
 	int absDifference;
 	int max;
 
-	firstNumber = 5;
-	secondNumber = 8;
+	firstNumber = ARBITRARY_FIRST_NUMBER;
+	secondNumber = ARBITRARY_SECOND_NUMBER;
 
 	// Get the absolute value of the difference
 	absDifference = firstNumber - secondNumber;

@@ -6,8 +6,6 @@
 #include <stdio.h>
 
 #define ONE 1
-#define UPPERCASE_A 'A'
-#define LOWERCASE_A 'a'
 
 void main2(void)
 {
@@ -46,6 +44,8 @@ void main2(void)
 #include <stdio.h>
 
 #define ONE 1
+#define UPPERCASE_A 'A'
+#define LOWERCASE_A 'a'
 
 void main(void)
 {

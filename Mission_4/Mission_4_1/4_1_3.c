@@ -4,7 +4,7 @@
 
 //---------------------------------------------------------------------------------
 //                                 Number To Date
-//                                 ---------------
+//                                 --------------
 //
 // General : Gets a number, and turns it into a date.
 //
@@ -33,5 +33,8 @@ void main(void)
 	scanf("%02hu%02hu%04hu", &day, &month, &year);
 
 	// Print the message
-	printf("\nThe year is %04hu, the month is %02hu, and the day is %02hu", year, month, day);
+	printf("\nThe year is %04hu, the month is %02hu, and the day is %02hu",
+		   year,
+		   month,
+		   day);
 }

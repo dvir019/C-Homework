@@ -22,12 +22,13 @@
 //---------------------------------------------------------------------------------
 void main(void)
 {
+
 	// Variables defenition
 	unsigned short day;
 	unsigned short month;
 	unsigned short year;
 
-	// Get the number
+	// Get the number, and store its parts
 	printf("Enter a date, in format DDMMYYYY:\n");
 	scanf("%02hu%02hu%04hu", &day, &month, &year);
 

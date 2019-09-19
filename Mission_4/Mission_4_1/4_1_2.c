@@ -59,11 +59,12 @@ void main(void)
 		isScorePossible = FALSE;
 	}
 
-	// print a message, according to the result
+	// Print that the scores are valid
 	if (isScorePossible)
 	{
 		printf("\nThose scores are valid.");
 	}
+	// Print that the scores are not valid
 	else
 	{
 		printf("\nThose scores are not valid.");

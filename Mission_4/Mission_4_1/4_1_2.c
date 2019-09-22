@@ -1,7 +1,7 @@
 // 4_1_2.c
 
 #include <stdio.h>
-#include "../../Macros/Macros.c"
+#include "../../Utils/Macros.c"
 
 #define BOOLEAN unsigned short
 #define TRUE 1

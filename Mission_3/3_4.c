@@ -1,7 +1,7 @@
 // 3_4.c
 
 #include <stdio.h>
-#include "../Macros/Macros.c"
+#include "../Utils/Macros.c"
 
 #define MAX_POINTS 150
 #define MIN_POINTS 40

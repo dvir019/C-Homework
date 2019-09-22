@@ -1,7 +1,7 @@
 // 3_1.c
 
 #include <stdio.h>
-#include "../Macros/Macros.c"
+#include "../Utils/Macros.c"
 
 #define ASCENDING_ORDER 'U'
 #define DECENDING_ORDER 'D'

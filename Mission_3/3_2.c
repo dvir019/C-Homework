@@ -1,7 +1,7 @@
 // 3_2.c
 
 #include <stdio.h>
-#include "../Macros/Macros.c"
+#include "../Utils/Macros.c"
 
 #define TRIANGLE_ANGLES_SUM 180
 #define NINETY 90

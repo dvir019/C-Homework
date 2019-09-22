@@ -12,4 +12,4 @@
 	firstNumber = firstNumber - secondNumber;
 
 #define ABS(number) \
-	((number > 0) ? (number) : (-number))
+	(((number) > (0)) ? (number) : (-(number)))

@@ -51,5 +51,6 @@ void main(void)
 			(tempSecondNumber = secondNumber, tempFirstNumber /= TEN));
 
 	// Print the result
-	commonDigits ? printf("\nThere are common digits") : printf("\nNo common digits");
+	commonDigits ? printf("\nThere are common digits") :
+				   printf("\nNo common digits");
 }

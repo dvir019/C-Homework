@@ -20,7 +20,7 @@
 
 //---------------------------------------------------------------------------------
 //                                 Divisble Numbers
-//                                 ---------------
+//                                 ----------------
 //
 // General : Finds all of the s to a given pair of numbers that are
 //			 smaller than one thousand.
@@ -49,7 +49,8 @@ void main(void)
 	scanf("%hu", &firstNumber);
 
 	// Get the second number
-	printf("Enter a whole number that is bigger than 1 and doesn't divisible divisible by the first number: ");
+	printf("Enter a whole number that is bigger than 1 and doesn't divisible"
+		   "divisible by the first number: ");
 	scanf("%hu", &secondNumber);
 
 	// Find the first number for the loop

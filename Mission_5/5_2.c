@@ -30,7 +30,8 @@
 //                                 Above Average
 //                                 ---------------
 //
-// General : Gets unknown amount of numbers and calculates the how many of them are above the average.
+// General : Gets unknown amount of numbers and calculates the how many of them are
+//			 above the average.
 //
 // Input   : Unknown amount of numbers.
 //

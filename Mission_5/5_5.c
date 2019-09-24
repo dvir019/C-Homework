@@ -10,11 +10,13 @@
 //                                 Numbers Series
 //                                 --------------
 //
-// General : Gets series, and print the biggest and smallest elements and the sum of each one.
+// General : Gets series, and print the biggest and smallest elements and the sum
+//			 of each one.
 //
 // Input   : Series on numbers.
 //
-// Process : Calculates the biggest and smallest element and the sum of each series.
+// Process : Calculates the biggest and smallest element and the sum of each
+//			 series.
 //
 // Output  : The biggest and smallest elements and the sum of each series.
 //
@@ -55,7 +57,8 @@ void main(void)
 		// Print the information about the series
 		if (seriesLength != STOP_SERIES)
 		{
-			printf("\nThe sum is %d\nThe biggest element is %hu\nThe smallest element is %hu",
+			printf("\nThe sum is %d\nThe biggest element is %hu\nThe smallest"
+				   "element is %hu",
 				   seriesSum,
 				   seriesMax,
 				   seriesMin);

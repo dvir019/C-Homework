@@ -37,5 +37,7 @@ void main(void)
 	for (poewerOfThree = ONE; poewerOfThree <= number; poewerOfThree *= THREE);
 
 	// Print the result
-	printf("\nThe smallest power of three that bigger than %hu is %d", number, poewerOfThree);
+	printf("\nThe smallest power of three that bigger than %hu is %d",
+		   number,
+		   poewerOfThree);
 }

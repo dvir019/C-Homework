@@ -2,6 +2,33 @@
 #include <stdio.h>
 
 //---------------------------------------------------------------------------------
+//                                 Number Of Digits
+//                                 ----------------
+//
+// General      : Calculates the Number of digits in a given number.
+//
+// Parameters   :
+//      number - The number
+//
+// Return Value : The Number of digits in the number.
+//
+//---------------------------------------------------------------------------------
+int NumberOfDgits(int number)
+{
+	// Variables defenition
+	int counter = !number;
+
+	// Iterate over the digits
+	for (; number; number /= 10)
+	{
+		counter++;
+	}
+
+	// Return the result
+	return (counter);
+}
+
+//---------------------------------------------------------------------------------
 //                                  Sum Of Digits
 //                                  -------------
 //
@@ -57,5 +84,5 @@ int ReverseNumber(int number)
 
 void main(void)
 {
-	printf("%d", SumOfDigits(1234));
+	printf("%d", NumberOfDgits(5));
 }

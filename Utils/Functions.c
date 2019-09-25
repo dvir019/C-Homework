@@ -159,7 +159,7 @@ int EvenDigits(int number)
 
 //---------------------------------------------------------------------------------
 //                                  Odd Digits
-//                                  -----------
+//                                  ----------
 //
 // General      : Creates a new number that contains only the odd digits of a
 //				  given number.
@@ -191,7 +191,33 @@ int OddDigits(int number)
 	return (ReverseNumber(reversedOddDigits));
 }
 
+//---------------------------------------------------------------------------------
+//                                      Power
+//                                      -----
+//
+// General      : Calculates a power.
+//
+// Parameters   :
+//      base - The base
+//		power - The power
+//
+// Return Value : The result of the power.
+//
+//---------------------------------------------------------------------------------
+float Power(float base, int power)
+{
+	float result = 1;
+	for (; power; power--)
+	{
+		result *= base;
+	}
+
+	return (result);
+}
+
+/*
 void main(void)
 {
-	printf("%d", OddDigits(1122634598));
+	printf("%f", Power(2.0, 10));
 }
+*/

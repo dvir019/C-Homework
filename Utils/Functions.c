@@ -117,7 +117,71 @@ int ReverseNumber(int number)
 	return (reversed);
 }
 
+//---------------------------------------------------------------------------------
+//                                  Even Digits
+//                                  -----------
+//
+// General      : Creates a new number that contains only the even digits of a
+//				  given number.
+//
+// Parameters   :
+//      number - The number
+//
+// Return Value : A new number that contains only the even digits of the number.
+//
+//---------------------------------------------------------------------------------
+int EvenDigits(int number)
+{
+	// Variables defenition
+	int reversedEvenDigits = 0;
+	int lastDigit;
+
+	// Iterate over the digits
+	for (; number; number /= 10)
+	{
+		lastDigit = number % 10;
+		reversedEvenDigits = (IsEven(lastDigit)) ?
+							 (reversedEvenDigits * 10 + lastDigit) :
+							 (reversedEvenDigits);
+	}
+
+	// Return the new number
+	return (ReverseNumber(reversedEvenDigits));
+}
+
+//---------------------------------------------------------------------------------
+//                                  Odd Digits
+//                                  -----------
+//
+// General      : Creates a new number that contains only the odd digits of a
+//				  given number.
+//
+// Parameters   :
+//      number - The number
+//
+// Return Value : A new number that contains only the odd digits of the number.
+//
+//---------------------------------------------------------------------------------
+int OddDigits(int number)
+{
+	// Variables defenition
+	int reversedOddDigits = 0;
+	int lastDigit;
+
+	// Iterate over the digits
+	for (; number; number /= 10)
+	{
+		lastDigit = number % 10;
+		reversedOddDigits = (IsOdd(lastDigit)) ?
+							 (reversedOddDigits * 10 + lastDigit) :
+							 (reversedOddDigits);
+	}
+
+	// Return the new number
+	return (ReverseNumber(reversedOddDigits));
+}
+
 void main(void)
 {
-	printf("%d", NumberOfDgits(5));
+	printf("%d", OddDigits(1122634598));
 }

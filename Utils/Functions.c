@@ -53,6 +53,8 @@ int NumberOfDgits(int number)
 	// Variables defenition
 	int counter = !number;
 
+	// Code section
+
 	// Iterate over the digits
 	for (; number; number /= 10)
 	{
@@ -80,6 +82,8 @@ int SumOfDigits(int number)
 	// Variables defenition
 	int sum = 0;
 
+	// Code section
+
 	// Iterate over the digits
 	for (; number; number /= 10)
 	{
@@ -106,6 +110,8 @@ int ReverseNumber(int number)
 {
 	// Variables defenition
 	int reversed = 0;
+
+	// Code section
 
 	// Iterate over the digits
 	for (; number; number /= 10)
@@ -135,6 +141,8 @@ int EvenDigits(int number)
 	// Variables defenition
 	int reversedEvenDigits = 0;
 	int lastDigit;
+
+	// Code section
 
 	// Iterate over the digits
 	for (; number; number /= 10)
@@ -167,6 +175,8 @@ int OddDigits(int number)
 	// Variables defenition
 	int reversedOddDigits = 0;
 	int lastDigit;
+
+	// Code section
 
 	// Iterate over the digits
 	for (; number; number /= 10)

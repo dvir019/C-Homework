@@ -198,7 +198,7 @@ int OddDigits(int number)
 // General      : Calculates a power.
 //
 // Parameters   :
-//      base - The base
+//      base  - The base
 //		power - The power
 //
 // Return Value : The result of the power.

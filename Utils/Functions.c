@@ -1,11 +1,46 @@
 // Functions.c
 #include <stdio.h>
+#include "Defines.c"
+
+//---------------------------------------------------------------------------------
+//                                     Is Even
+//                                     -------
+//
+// General      : Checks if the given number is even.
+//
+// Parameters   :
+//      number - The number
+//
+// Return Value : Whether or not the number is even.
+//
+//---------------------------------------------------------------------------------
+BOOLEAN IsEven(int number)
+{
+	return (number % 2 == 0);
+}
+
+//---------------------------------------------------------------------------------
+//                                      Is Odd
+//                                      ------
+//
+// General      : Checks if the given number is odd.
+//
+// Parameters   :
+//      number - The number
+//
+// Return Value : Whether or not the number is odd.
+//
+//---------------------------------------------------------------------------------
+BOOLEAN IsOdd(int number)
+{
+	return (!IsEven(number));
+}
 
 //---------------------------------------------------------------------------------
 //                                 Number Of Digits
 //                                 ----------------
 //
-// General      : Calculates the Number of digits in a given number.
+// General      : Calculates the number of digits in a given number.
 //
 // Parameters   :
 //      number - The number

@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include "../Utils/Functions.c"
 
+#define ZERO 0
+#define TEN 10
+
 //---------------------------------------------------------------------------------
 //                               Convert To Base Ten
 //                               -------------------
@@ -19,15 +22,15 @@
 int ConvertToBaseTen(int number, int base)
 {
 	// Variables defenition
-	int numberInBaseTen = 0;
-	int counter = 0;
+	int numberInBaseTen = ZERO;
+	int counter = ZERO;
 
 	// Code section
 
 	// Iterate over the digits
-	for (; number; number /= 10, counter++)
+	for (; number; number /= TEN, counter++)
 	{
-		numberInBaseTen += (number % 10) * Power(base, counter);
+		numberInBaseTen += (number % TEN) * Power(base, counter);
 	}
 
 	// Return the result

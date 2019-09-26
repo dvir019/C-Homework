@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include "../Utils/Macros.c"
 
+#define ONE_HUNDRED 100
+#define TEN_THOUSAND 10000
+#define DAYS_IN_YEAR 365
+#define DAYS_IN_MONTH 30
+
 //---------------------------------------------------------------------------------
 //                                  Date To Days
 //                                  ------------
@@ -26,18 +31,18 @@ int DateToDays(int date)
 	// Code section
 
 	// Calculate the year, month and day
-	year = date % 10000;
+	year = date % TEN_THOUSAND;
 	date -= year;
-	date /= 10000;
-	month = date % 100;
+	date /= TEN_THOUSAND;
+	month = date % ONE_HUNDRED;
 	date -= month;
-	date /= 100;
-	day = date % 100;
+	date /= ONE_HUNDRED;
+	day = date % ONE_HUNDRED;
 
 	// Convert to days
 	days = day;
-	days += month * 30;
-	days += year * 365;
+	days += month * DAYS_IN_MONTH;
+	days += year * DAYS_IN_YEAR;
 
 	// Return the result
 	return (days);
@@ -66,16 +71,16 @@ int DaysToDate(int days)
 	// Code section
 
 	// Calculate the year, month and day
-	year = days / 365;
-	days -= year * 365;
-	month = days / 30;
-	days -= month * 30;
+	year = days / DAYS_IN_YEAR;
+	days -= year * DAYS_IN_YEAR;
+	month = days / DAYS_IN_MONTH;
+	days -= month * DAYS_IN_MONTH;
 	day = days;
 
 	// Calculate the date
 	date = day;
-	date = date * 100 + month;
-	date = date * 10000 + year;
+	date = date * ONE_HUNDRED + month;
+	date = date * TEN_THOUSAND + year;
 
 	// Return the result
 	return (date);

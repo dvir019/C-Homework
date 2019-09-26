@@ -4,8 +4,8 @@
 #include "../Utils/Functions.c"
 
 //---------------------------------------------------------------------------------
-//                                 Sum Of New Numbers
-//                                 ------------------
+//                                  Sum Of New Numbers
+//                                  ------------------
 //
 // General      : Calculates the sum of the number that created from the even
 //				  digits of the number and the number that created from the odd
